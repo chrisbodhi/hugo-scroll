@@ -9,8 +9,33 @@
       <section>
         <a href="https://themes.gohugo.io/hugo-scroll/">Design</a> template
         built with ♥️ by
-        <a href="https://www.janraasch.com" title="Jan Raasch">Jan Raasch</a>
+        <a href="https://www.janraasch.com" title="Jan Raasch">Jan Raasch</a>,
+        adapted by <a href="https://newschematic.org" title="New Schematic">New Schematic</a>
       </section>{{ end }}
 
   </div>
+  <script>
+    // Services list
+    const toggle = e => {
+      const name = e.target.id.split('-')[1]
+      const showSpan = document.getElementById('show-' + name)
+      const hideSpan = document.getElementById('hide-' + name)
+      const list = document.getElementById(name + '-list')
+
+      showSpan.classList.toggle('hidden')
+      hideSpan.classList.toggle('hidden')
+      list.classList.toggle('hidden')
+    }
+
+    // Collaborations
+    const toggleNews = _e => {
+      const showSpan = document.getElementById('show-omaye')
+      const hideSpan = document.getElementById('hide-omaye')
+      const omayeParagraph = document.getElementById('omaye')
+
+      showSpan.classList.toggle('hidden')
+      hideSpan.classList.toggle('hidden')
+      omayeParagraph.classList.toggle('hidden')
+    }
+  </script>
 </footer>
